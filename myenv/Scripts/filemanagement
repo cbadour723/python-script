@@ -1,0 +1,10 @@
+import os
+import shutil
+
+source_dir = "C:/Users/caleb/Downloads"
+target_dir = "C:/Users/caleb/Downloads/.txt files"
+
+for filename in os.listdir(source_dir):
+    if filename.endswith(".txt"):
+        shutil.move(os.path.join(source_dir, filename), target_dir)
+print("All .txt files moved successfully.")
